@@ -208,13 +208,18 @@
         .main-content .featured-article {
             position: relative;
             width: 100%;
+            height: 0;
+            padding-top: 16.666%; /* 6:1 アスペクト比 (100 / 6 = 16.666) */
             overflow: hidden;
             margin-bottom: 20px;
         }
 
         .main-content .featured-article img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -234,14 +239,14 @@
         }
 
         @media (max-width: 768px) {
-            .main-content .featured-article img {
-                aspect-ratio: 6 / 1; /* 横画面デバイスのアスペクト比 6:1 */
+            .main-content .featured-article {
+                padding-top: 16.666%; /* 6:1 アスペクト比 */
             }
         }
 
         @media (max-width: 480px) {
-            .main-content .featured-article img {
-                aspect-ratio: 2 / 1; /* 縦画面デバイスのアスペクト比 2:1 */
+            .main-content .featured-article {
+                padding-top: 50%; /* 2:1 アスペクト比 */
             }
 
             .main-content {
@@ -360,7 +365,7 @@
         <h1><center>ナマイキデザインへようこそ</center></h1>
         <p>&emsp;徒然なるままに何となく書いている個人サイトです。基本的にブログみたいなものですので、「ふーん」と軽く覗くのがちょうどいいと思います。着の身着のまま、気になったことはやる気次第で色々やりますので、なにとぞよろしくお願いします。</p>
         <div class="featured-article">
-            <img src="適当画像 2025 01 23.png" alt="新しい記事">
+            <img src="適当画像 2025 01 21.png" alt="新しい記事">
             <div class="title">新しい記事</div>
         </div>
         <h1><center>新しい記事</center></h1>
