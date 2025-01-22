@@ -243,6 +243,7 @@
                          3px -3px 5px rgba(0, 0, 0, 0.7), 
                          -3px 3px 5px rgba(0, 0, 0, 0.7);
             text-align: center;
+            white-space: nowrap; /* テキストが改行されないようにする */
         }
 
         @media (max-width: 768px) {
@@ -254,6 +255,10 @@
         @media (max-width: 480px) {
             .main-content .featured-article {
                 padding-top: 50%; /* 2:1 アスペクト比 */
+            }
+
+            .main-content .featured-article .title {
+                font-size: 2rem; /* 縦画面で文字サイズを調整 */
             }
 
             .main-content {
