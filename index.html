@@ -225,35 +225,29 @@
         }
 
         .main-content .featured-article .overlay {
+            display: none; /* スモークを非表示に */
+        }
+
+        .main-content .featured-article .title {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: black;
             font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
         }
 
-        /* 新しい記事の画像のアスペクト比の調整 */
-        @media (min-width: 1024px) {
+        @media (max-width: 768px) {
             .main-content .featured-article img {
-                aspect-ratio: 6 / 1; /* 高解像度デバイスでは横6:縦1 */
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .main-content .featured-article img {
-                aspect-ratio: 4 / 3; /* タブレットやPCでも最適化 */
+                aspect-ratio: 16 / 9;
             }
         }
 
         @media (max-width: 480px) {
             .main-content .featured-article img {
-                aspect-ratio: 2 / 1; /* スマホで横2:縦1に調整 */
+                aspect-ratio: 4 / 3;
             }
 
             .main-content {
@@ -373,7 +367,7 @@
         <p>&emsp;徒然なるままに何となく書いている個人サイトです。基本的にブログみたいなものですので、「ふーん」と軽く覗くのがちょうどいいと思います。着の身着のまま、気になったことはやる気次第で色々やりますので、なにとぞよろしくお願いします。</p>
         <div class="featured-article">
             <img src="適当画像 2025 01 23.png" alt="新しい記事">
-            <div class="overlay">新しい記事</div>
+            <div class="title">新しい記事</div> <!-- 文字を黒色に変更 -->
         </div>
         <h1><center>新しい記事</center></h1>
     </div>
