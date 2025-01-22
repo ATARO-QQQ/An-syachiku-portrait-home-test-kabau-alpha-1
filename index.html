@@ -224,8 +224,11 @@
             object-fit: cover;
         }
 
-        .main-content .featured-article .overlay {
-            display: none; /* スモークを非表示に */
+        /* 新しい記事の背景画像のアスペクト比調整 */
+        .main-content .featured-article img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
 
         .main-content .featured-article .title {
@@ -239,9 +242,17 @@
             text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
         }
 
-        @media (max-width: 768px) {
+        @media (min-width: 1024px) {
+            /* 横画面デバイスでの表示 */
             .main-content .featured-article img {
-                aspect-ratio: 16 / 9;
+                aspect-ratio: 6 / 1; /* 横6:縦1 */
+            }
+        }
+
+        @media (max-width: 1023px) and (min-width: 481px) {
+            /* 縦画面デバイスでの表示 */
+            .main-content .featured-article img {
+                aspect-ratio: 2 / 1; /* 横2:縦1 */
             }
         }
 
@@ -249,13 +260,8 @@
             .main-content .featured-article img {
                 aspect-ratio: 4 / 3;
             }
-
-            .main-content {
-                font-size: 0.9rem;
-            }
         }
 
-        /* フッター */
         footer {
             background-color: #180614;
             color: #fffffc;
@@ -366,8 +372,8 @@
         <h1><center>ナマイキデザインへようこそ</center></h1>
         <p>&emsp;徒然なるままに何となく書いている個人サイトです。基本的にブログみたいなものですので、「ふーん」と軽く覗くのがちょうどいいと思います。着の身着のまま、気になったことはやる気次第で色々やりますので、なにとぞよろしくお願いします。</p>
         <div class="featured-article">
-            <img src="適当画像 2025 01 23.png" alt="新しい記事">
-            <div class="title">新しい記事</div> <!-- 文字を黒色に変更 -->
+            <img src="適当画像 2025 01 21.png" alt="新しい記事">
+            <div class="title">新しい記事</div>
         </div>
         <h1><center>新しい記事</center></h1>
     </div>
