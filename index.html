@@ -233,17 +233,20 @@
             text-align: center;
         }
 
-        @media (max-width: 768px) {
-            .main-content .featured-article img {
-                aspect-ratio: 6 / 1; /* 横画面デバイスのアスペクト比 6:1 */
-            }
+
+    /* 横画面デバイスでのアスペクト比調整 */
+    @media (min-width: 768px) {
+        .main-content .featured-article img {
+            aspect-ratio: 6 / 1; /* 横6:縦1 */
         }
+    }
 
-        @media (max-width: 480px) {
-            .main-content .featured-article img {
-                aspect-ratio: 2 / 1; /* 縦画面デバイスのアスペクト比 2:1 */
-            }
-
+    /* 縦画面デバイスでのアスペクト比調整 */
+    @media (max-width: 767px) {
+        .main-content .featured-article img {
+            aspect-ratio: 2 / 1; /* 横2:縦1 */
+        }
+    }
             .main-content {
                 font-size: 0.9rem;
             }
