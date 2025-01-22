@@ -177,12 +177,6 @@
             object-fit: cover;
         }
 
-        @media (max-width: 480px) {
-            .carousel-images img {
-                aspect-ratio: 4 / 3; /* 縦3:横4に調整 */
-            }
-        }
-
         .carousel button {
             position: absolute;
             top: 50%;
@@ -241,13 +235,13 @@
 
         @media (max-width: 768px) {
             .main-content .featured-article img {
-                aspect-ratio: 16 / 9;
+                aspect-ratio: 6 / 1; /* 横画面デバイスのアスペクト比 6:1 */
             }
         }
 
         @media (max-width: 480px) {
             .main-content .featured-article img {
-                aspect-ratio: 4 / 3;
+                aspect-ratio: 2 / 1; /* 縦画面デバイスのアスペクト比 2:1 */
             }
 
             .main-content {
